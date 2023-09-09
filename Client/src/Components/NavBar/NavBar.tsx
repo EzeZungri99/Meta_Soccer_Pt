@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom"
 
+//This is the Navigation Bar component, which contains 2 routes, 'stats' and 'line up'
 const NavBar: React.FC = () => {
     return (
        <div>

@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route,} from 'react-router-dom';
+import { Routes } from 'react-router-dom';
+import NavBar from './Components/NavBar/NavBar';
+import Title from './Components/Title/Title';
+import LineUp from './Views/LineUp/LineUp';
+import Stats from './Views/Stats/Stats';
+import axios from "axios"
+
+axios.defaults.baseURL = 'http://localhost:3001/'
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Title/>
+    <NavBar/>
+      <Routes>
+        <Route path="/stats" element={<Stats />} />
+        <Route path="/lineup" element={<LineUp />} />
+      </Routes>
+    </>
   );
 }
 
