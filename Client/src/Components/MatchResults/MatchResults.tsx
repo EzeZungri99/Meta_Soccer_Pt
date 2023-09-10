@@ -26,19 +26,19 @@ const MatchResults: React.FC = () => {
           <div className={style.teamresults}>
             
             <div className={style.teamA}>
-            <div>{teamNameL}</div>
-                <div className={style.squareA}>
-                    <div className={style.number}>{matchScore[0]}</div>
+            <div className={style.teamName}>{teamNameL}<div style={{width:"40px", height:"65px", backgroundColor:"rgba(61, 114, 253, 1)", borderRadius:"45%"}}></div></div>
+                <div className={style.squareA} style={matchScore[0] > matchScore[1]? {borderLeftColor:"2px solid green"} :{}}>
+                    <div className={style.number} >{matchScore[0]}</div>
                 </div>
 
             </div>
-
+                
+            <div style={{height:"30px",width:"1px",backgroundColor:"white",position:"absolute"}}></div>
             <div className={style.teamB}>
-
-                 <div className={style.squareB}>
-                    <div className={style.number}>{matchScore[1]}</div>
+                 <div className={style.squareB} style={matchScore[0] < matchScore[1]? {borderRight:"5px solid green"} :{}}>
+                    <div className={style.number} >{matchScore[1]}</div>
                 </div>
-                <div>{teamNameR}</div>
+                <div className={style.teamName}><div style={{width:"40px", height:"65px",  backgroundColor:"rgba(255, 100, 177, 0.6)", borderRadius:"45%"}}></div>{teamNameR}</div>
 
             </div>
 

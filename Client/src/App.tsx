@@ -6,6 +6,7 @@ import Title from './Components/Title/Title';
 import LineUp from './Views/LineUp/LineUp';
 import Stats from './Views/Stats/Stats';
 import axios from "axios"
+import ZoneResponsive from './Views/Zone/ZoneResponsive';
 
 axios.defaults.baseURL = 'http://localhost:3001/'
 
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/stats" element={<Stats />} />
         <Route path="/lineup" element={<LineUp />} />
+        <Route path="/zone" element={<ZoneResponsive/>} />
       </Routes>
     </>
   );

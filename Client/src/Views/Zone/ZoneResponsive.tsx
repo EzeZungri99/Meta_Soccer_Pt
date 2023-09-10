@@ -1,17 +1,18 @@
 import React from "react"
-import style from "./Stats.module.css"
+import style from "./ZoneResponsive.module.css"
 import MatchResults from "../../Components/MatchResults/MatchResults"
 import AttackZones from "../../Components/AttackZones/AttackZones"
-import MatchStatistics from "../../Components/MatchStatistics/MatchStatistics"
 
-const Stats : React.FC = () => {
-
+const ZoneResponsive : React.FC = () => {
 
     return(
         <div>
+            <div>
             <MatchResults/>
+
+            </div>
+            
             <div className={style.container}>
-                <MatchStatistics/>
                 <AttackZones/>
             </div>
 
@@ -21,4 +22,4 @@ const Stats : React.FC = () => {
     
 }
 
-export default Stats
+export default ZoneResponsive

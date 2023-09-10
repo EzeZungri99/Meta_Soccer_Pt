@@ -1,31 +1,138 @@
+@font-face {
+    font-family: 'Space Grotesk B';
+    src: url('../../Fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Space Grotesk L';
+    src: url('../../Fonts/SpaceGrotesk-Light.ttf') format('truetype');
+  }
+
+
+
 .teamtable{
-    background-color: white;
+    background-color: grey;
     flex: 1;
-    color: blueviolet;
+    color: rgba(255, 255, 255, 1);
+    margin: 25px;
+    border-collapse: collapse;
+
 
 }
 .container{
     display: flex;
     flex-direction: row;
+    background-color:rgba(6, 6, 10, 1);
+    height: 720px;
 
-}
-.teamtable1{
-    background-color: pink;
-    flex: 1;
-    color: blueviolet;
-    gap: 5px;
+
 
 }
 
-.columnas{
+
+.titletable{
+
+    flex-direction: row; 
+
+    width: 100%;
+    justify-content: space-between;
+    background-color:rgba(21, 21, 21, 1);
+    height: 20px;
+
+
+}
+
+.teamname{
 text-align: start;
+width: 100%;
+color: rgba(255, 255, 255, 1);
+
+}
+
+.tactic{
+    flex: 1;
+text-align: end;
+width: 100%;
+color: rgba(255, 255, 255, 1);
+}
+
+.columns{
+text-align: start;
+height: 20px;
+border: 0.5px solid rgba(28, 28, 28, 1);
+background-color: rgba(6, 6, 10, 1);
 
 }
 
 .th1{
     width: 12%;
+
+    border: 0.5px solid rgba(28, 28, 28, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Space Grotesk L';
+    font-size: 14px;
+    line-height: 17px;
+    
 }
 
 .th2{
+    text-align: start;
+    margin: 30px;
     width:64% ;
+    font-family: 'Space Grotesk L';
+    font-size: 14px;
+    line-height: 17px;
+    border: 0.5px solid rgba(28, 28, 28, 1);
+    color: rgba(255, 255, 255, 1);
 }
+
+th{
+    padding: 8px;
+    border: 0.5px solid rgba(28, 28, 28, 1);
+}
+td{
+    border: 0.5px solid rgba(28, 28, 28, 1);
+    padding: 8px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.condition{
+    color: rgba(106, 213, 106, 1)
+}
+
+
+
+
+@media (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-direction: column; /* Cambia a un diseño de columna en dispositivos móviles */
+        background-color: rgba(6, 6, 10, 1);
+        height: auto;
+    }
+
+
+
+
+    .teamtable {
+      flex-direction: column; 
+      align-items: flex-start; 
+    }
+  
+
+    .titletable {
+      width: 100%;
+      background-color:rgba(21, 21, 21, 1)
+    }
+  
+    .teamname,
+    .tactic {
+      text-align: left; 
+      width: 100%; 
+    }
+    
+
+    .columns {
+      text-align: left; 
+      width: 100%; 
+    }
+  }

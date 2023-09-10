@@ -52,6 +52,7 @@ const MatchStatistics: React.FC = () => {
     const [showSkills, setShowSkills] = useState(false);
 
     useEffect(() => {
+
         const skills = document.getElementById('habilidades');
         const distanciaSkills = window.innerHeight - (skills?.getBoundingClientRect()?.top || 0); // Considera el caso en el que 'skills' sea nulo
         if (distanciaSkills >= 300) {

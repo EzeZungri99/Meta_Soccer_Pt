@@ -1,16 +1,4 @@
-/* .container{
 
-    background-color:red;
-
-    border: 2px;
-    display: flex;
-    flex-direction:row; 
-    justify-content: center;
-    align-items: flex-start; 
-    border: 2px solid black;
-
-
-} */
 @font-face {
   font-family: 'Space Grotesk S';
   src: url('../../Fonts/SpaceGrotesk-Light.ttf') format('truetype');
@@ -29,10 +17,37 @@
 .square{
     width: 70%;
     height: 60%;
-    background-color: green; 
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(21, 21, 21, 1); 
+    align-items: end;
+    gap: 10px;
+    border: 2px solid grey;
+    
+
+
 }
-
-
+.zone{
+  display: flex;
+  justify-content:center;
+  align-items:end;
+  background-color:rgba(61, 114, 253, 0.8);
+  opacity: 50%;
+}
+.zone:before {
+   content: " ";
+   position: absolute;
+   z-index: 2;
+   left: 0;
+   width: 22px;
+   height: 22px;
+   bottom: -11px;
+   -webkit-transform: rotate(45deg);
+           transform: rotate(45deg);
+ 
+    box-shadow: inset -1px -1px 1px red;
+    background: #fff;
+}
   
   .titleContainer {
 

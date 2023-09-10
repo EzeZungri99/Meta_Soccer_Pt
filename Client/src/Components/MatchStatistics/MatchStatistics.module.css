@@ -44,7 +44,7 @@
   
 
   .title {
-    font-family: "Space Grotesk S";
+    font-family: 'Space Grotesk S';
     flex: 1;
     text-align: center; 
     min-width: 200px;
@@ -52,10 +52,10 @@
 
   }
   
-  /* Estilo para el elemento style.rightscore */
+ 
   .rightscore {
-    flex: 1; /* Ocupa todo el espacio disponible a la derecha */
-    text-align: right; /* Alinea el contenido a la derecha */
+    flex: 1;
+    text-align: right; 
     margin-right: 15px;
   }
 
@@ -87,31 +87,16 @@
     margin-bottom: 30px;
     align-items: center;
     justify-content: center;
-    /* border-left: 2px solid black; */
+
   }
   
  .progress {
-    /* background-color: #8db61c; */
+
     position: absolute;
     top: 0;
     left: 0;
     height: 8px;
   }
-/*   
-.barra-skill span {
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    background-color: #1cb698;
-    border-radius: 50px;
-    line-height: 40px;
-    text-align: center;
-    top: -17px;
-    right: -15px;
-    font-size: 14px;
-  }
-   */
-
 
 
 

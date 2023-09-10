@@ -1,3 +1,6 @@
+
+  
+
 .container{
     background-color:rgba(6, 6, 10, 1);
 
@@ -24,19 +27,28 @@
     
 }
 .squareA{
-    /* margin-top: 20px; */
+     margin-top: 5px;
     height: 58px;
-    width: 90px;
+    width: 80px;
     background-color: rgba(21, 21, 21, 1);
     display: flex;
     justify-content: center;
     align-items: center; 
     color: white;
+    
 
 }
-
+.teamName{
+    display: flex;
+    align-items: center;
+    font-size: large;
+    color: rgb(123, 118, 118);
+    margin-inline: 1.5rem ;
+    gap: 1.5rem;
+}
 .number{
     font-size: large;
+
 }
 
 .teamB{
@@ -49,9 +61,9 @@
 }
 
 .squareB{
-    /* margin-top: 20px; */
+     margin-top: 5px;
     height: 58px;
-    width: 90px;
+    width: 80px;
     background-color: rgba(21, 21, 21, 1);
     display: flex;
     justify-content: center;
@@ -69,7 +81,7 @@
 }
 
 .a{
-    margin: 20px;
+    padding: 20px;
     text-align: center;
     color: white;
     font-size: large;

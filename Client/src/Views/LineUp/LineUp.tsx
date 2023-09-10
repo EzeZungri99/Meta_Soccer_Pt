@@ -42,92 +42,99 @@ useEffect( ()=>{
 },[])
 
     return(
-        <div className={style.container}>
-            {/* <div className={style.teamtable}> */}
+
+
+
+
+    <div className={style.container}>
+
             <table className={style.teamtable}>
-
-                <thead>
-                    <tr><div><p>{leftTeam?.teamname}</p> <p>{leftTeam?.tactic}</p></div></tr>
-
-                        <tr className={style.columnas}>
-
-
-                        
-                        <th className={style.th1}>LineUp</th>
-
-                        <th className={style.th2}>Player</th>
-                        
-                        <th className={style.th1}>Rayito</th>
-                        
-                        <th className={style.th1}>Rating</th>
-
-
-                        </tr>
-                </thead>
-
-                <tbody>
-                    {leftTeam? leftTeam.lineup.map((player)=>{
-                      
-                        return <tr className={style.columnas}>
-                        <th>{player.dorsal}</th>
-                        <td>{player.player.name.slice(0,1)}. {player.player.lastName}</td>
-                        <th>{player.player.condition}</th>
-                        <th>{player.performance}</th>
-
-
-                    </tr>
-
-                    })
-                    :null
-                    }
-                </tbody>
-
+        <thead>
+          <tr className={style.titletable}>
+            <td colSpan={2} className={style.teamname}>
+           {leftTeam?.teamname}
+            </td>
+            <td colSpan={2} className={style.tactic}>
+              {leftTeam?.tactic}
+            </td>
+          </tr>
+        </thead>
+        <thead>
+          <tr className={style.titletable}>
+            <th className={style.th1}>LineUp</th>
+            <th className={style.th2}>Player</th>
+            <th className={style.th1}>Rayito</th>
+            <th className={style.th1}>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {leftTeam
+            ? leftTeam.lineup.map((player) => {
+                return (
+                  <tr className={style.columns} key={player.dorsal}>
+                    <th>{player.dorsal}</th>
+                    <td>
+                      {player.player.name.slice(0, 1)}. {player.player.lastName}
+                    </td>
+                    <th className={style.condition}>
+                      {player.player.condition}
+                    </th>
+                    <th>{player.performance}</th>
+                  </tr>
+                );
+              })
+            : null}
+        </tbody>
             </table>
 
+        
+
             <table className={style.teamtable}>
+        <thead>
+          <tr className={style.titletable}>
+           
+            <td colSpan={2} className={style.teamname}>
+            {rightTeam?.teamname}
 
-<thead>
-    <tr><div><p>{rightTeam?.teamname}</p> <p>{rightTeam?.tactic}</p></div></tr>
+            </td>
+            <td colSpan={2} className={style.tactic}>
+              {rightTeam?.tactic}
+            </td>
+          </tr>
+        </thead>
+        <thead>
+          <tr className={style.titletable}>
+            <th className={style.th1}>LineUp</th>
+            <th className={style.th2}>Player</th>
+            <th className={style.th1}>Condition</th>
+            <th className={style.th1}>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rightTeam
+            ? rightTeam.lineup.map((player) => {
+                return (
+                  <tr className={style.columns} key={player.dorsal}>
+                    <th>{player.dorsal}</th>
+                    <td>
+                      {player.player.name.slice(0, 1)}. {player.player.lastName}
+                    </td>
+                    <th className={style.condition}>
+                      {player.player.condition}
+                    </th>
+                    <th>{player.performance}</th>
+                  </tr>
+                );
+              })
+            : null}
+        </tbody>
+            </table>
 
-        <tr className={style.columnas}>
 
 
-        
-        <th className={style.th1}>LineUp</th>
 
-        <th className={style.th2}>Player</th>
-        
-        <th className={style.th1}>Rayito</th>
-        
-        <th className={style.th1}>Rating</th>
-
-
-        </tr>
-</thead>
-
-<tbody>
-    {rightTeam? rightTeam.lineup.map((player)=>{
-      
-        return <tr className={style.columnas}>
-        <th>{player.dorsal}</th>
-        <td>{player.player.name.slice(0,1)}. {player.player.lastName}</td>
-        <th>{player.player.condition}</th>
-        <th>{player.performance}</th>
-
-
-    </tr>
-
-    })
-    :null
-    }
-</tbody>
-
-</table>
-
-        
-
-        </div>
-    )
+    </div>
+  );
 
     
 }
