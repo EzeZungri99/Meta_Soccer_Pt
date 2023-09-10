@@ -1,6 +1,12 @@
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../../Fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+  }
+
 .title{
+    font-family: "Space Grotesk";
     text-align: left;
     color: #FFFFFF;
-    padding: 24px;
+    padding: 2px;
 
 }

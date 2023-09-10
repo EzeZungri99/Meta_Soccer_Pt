@@ -1,11 +1,15 @@
-body {
-
-
-  background-color:#06060A;
-
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('./Fonts/SpaceGrotesk-Bold.ttf') format('truetype');
 }
 
-code {
+
+body {
+  font-family: 'Space Grotesk',sans-serif;
+  background-color:#06060A;
+}
+
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */

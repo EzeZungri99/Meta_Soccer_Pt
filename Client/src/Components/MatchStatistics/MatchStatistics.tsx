@@ -42,12 +42,15 @@ const MatchStatistics: React.FC = () => {
                     {statistics.map((statistic, index) => (
                         <div className={style.items} key={index}>
                             <div>
-                            <div className={style.title}>{statistic.name}</div>
+ 
 
                                 <div className={style.score}>
 
 
                                     <div className={style.leftscore}>{statistic.TeamLeft}</div>
+
+                                    <div className={style.title}>{statistic.name}</div>
+
                                     <div className={style.rightscore}>{statistic.TeamRight}
                                     </div>
                                 

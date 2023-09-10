@@ -5,7 +5,7 @@ import Style from './Title.module.css'
 const Title: React.FC = () => {
     return (
        <div>
-        <h1 className={Style.title}>Match Report</h1>
+        <h3 className={Style.title}>Match Report</h3>
        </div> 
     )
 };

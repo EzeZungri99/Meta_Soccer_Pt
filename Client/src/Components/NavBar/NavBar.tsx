@@ -6,8 +6,8 @@ import style from "./NavBar.module.css"
 const NavBar: React.FC = () => {
     return (
        <div className={style.navbar}>
-        <Link to="/stats" > STATS</Link>
-        <Link to="/lineup" > LINEUP</Link>
+        <Link to="/stats" > STATS </Link>
+        <Link to="/lineup" > LINEUP </Link>
        </div> 
     )
 };

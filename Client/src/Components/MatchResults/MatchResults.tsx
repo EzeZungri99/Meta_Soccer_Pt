@@ -6,23 +6,30 @@ const MatchResults: React.FC = () => {
     return (
        <div className={style.container}>
 
-        <div className={style.teamresults}>
+
+          <div className={style.teamresults}>
             
             <div className={style.teamA}>
-                <br /><br /><br />
-                <br /><br />
+                <div className={style.squareA}>
+                    <div className={style.number}>5</div>
+                </div>
+
             </div>
 
             <div className={style.teamB}>
-                <br /><br /><br />
-                <br /><br />
+                 <div className={style.squareB}>
+                    <div className={style.number}>5</div>
+                </div>
+
             </div>
 
-        </div>
+          </div>
 
 
-        <div className={style.points}> + 3 Points</div>
-        <div className={style.a}> 4</div>
+          <div className={style.points}> + 3 Points
+          </div>
+          <div className={style.a}> 4
+          </div>
 
        </div> 
     )

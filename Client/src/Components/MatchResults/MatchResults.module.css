@@ -1,39 +1,85 @@
 .container{
-    background-color: aqua;
-    margin: 24px;
+    background-color:rgba(6, 6, 10, 1);
+
 
 }
 
 .teamresults{
     display: flex; 
     flex-direction: row;
-
-
-    align-items: center; /* Equivalente a items-center en Tailwind CSS */
-    justify-content: center; /* Equivalente a justify-center en Tailwind CSS */
+    height: fit-content;
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 0;
 }
 
 .teamA{
-    background-color: blue;
+    background-color: rgba(6, 6, 10, 1);
     flex: 1;
     border: 2px;
+    width: max-content;
+    /* height: 80px; */
+    justify-content: flex-end;
+    display: flex;
+    
+}
+.squareA{
+    /* margin-top: 20px; */
+    height: 58px;
+    width: 90px;
+    background-color: rgba(21, 21, 21, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+
+}
+
+.number{
+    font-size: large;
 }
 
 .teamB{
-    background-color: red;
+    background-color: rgba(6, 6, 10, 1);
     flex: 1;
+    /* height: 80px; */
     border: 2px;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.squareB{
+    /* margin-top: 20px; */
+    height: 58px;
+    width: 90px;
+    background-color: rgba(21, 21, 21, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+
 }
 
 .points{
-    margin: 10px;
+    margin: 20px;
     color: greenyellow;
     text-align: center;
+    font-size: large;
+    background-color: rgba(6, 6, 10, 1);
 }
 
 .a{
-    margin: 10px;
+    margin: 20px;
     text-align: center;
-    color: yellow;
+    color: white;
+    font-size: large;
+    background-color: rgba(6, 6, 10, 1);
+    border-bottom: 1px solid rgba(28, 28, 28, 1) ;
 
 }
+
+
+
+
+
+

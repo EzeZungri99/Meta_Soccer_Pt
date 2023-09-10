@@ -1,0 +1,31 @@
+.teamtable{
+    background-color: white;
+    flex: 1;
+    color: blueviolet;
+
+}
+.container{
+    display: flex;
+    flex-direction: row;
+
+}
+.teamtable1{
+    background-color: pink;
+    flex: 1;
+    color: blueviolet;
+    gap: 5px;
+
+}
+
+.columnas{
+text-align: start;
+
+}
+
+.th1{
+    width: 12%;
+}
+
+.th2{
+    width:64% ;
+}
