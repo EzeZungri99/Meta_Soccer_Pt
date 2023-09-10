@@ -8,6 +8,7 @@ export type formatedPlayer = Pick<Player, "role" | "condition" | "name" | "lastN
 export type formatedLineup = {
   dorsal: number,
   player: formatedPlayer
+  performance: number
 }
 
 
@@ -19,10 +20,10 @@ const getMatchController = (req: Request, res: Response) => {
 
     const lineupL: Lineup[] = jsonData.leftLineup
     const lineupR: Lineup[] = jsonData.rightLineup
-
+    const perfomances: Performances = jsonData.performances
    
 
-    const myres = formatLineup(lineupL)
+    const myres = formatLineup(lineupL, perfomances.left.fieldPlayers )
     res.status(200).json(myres);
   } catch (error) {
     console.error('Error al leer el archivo:', error);
