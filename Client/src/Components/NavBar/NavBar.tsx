@@ -4,11 +4,11 @@ import style from "./NavBar.module.css"
 
 const NavBar: React.FC = () => {
   const location = useLocation();
-  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 768);
+  const [isMobileScreen, setIsMobileScreen] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsWideScreen(window.innerWidth <= 768);
+      setIsMobileScreen(window.innerWidth <= 768);
     };
 
     window.addEventListener('resize', handleResize);
@@ -23,7 +23,7 @@ const NavBar: React.FC = () => {
       <Link to="/stats" className={location.pathname === '/stats' ? style.active : ""}> STATS </Link>
       <Link to="/lineup" className={location.pathname === '/lineup' ? style.active : ''}> LINEUP </Link>
 
-      {isWideScreen && <Link to="/zone" className={location.pathname === '/zone' ? style.active : ''}> ZONE </Link>}
+      {isMobileScreen && <Link to="/zone" className={location.pathname === '/zone' ? style.active : ''}> ZONE </Link>}
     </div>
   )
 };
