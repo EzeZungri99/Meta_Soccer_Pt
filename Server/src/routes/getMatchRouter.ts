@@ -1,10 +1,9 @@
 import { Router, Request, Response } from "express";
+import getMatchController from "../handler/getMatchController";
 
 
 const getMatchRouter = Router();
 
-getMatchRouter.get('/match', (req: Request, res: Response) => {
-    res.send("Estoy en la ruta para obtener todos los partidos");
-  });
+getMatchRouter.get('/match', getMatchController);
 
 export default getMatchRouter;
