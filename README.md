@@ -1,9 +1,10 @@
 Descripción del Proyecto
 
-¡Bienvenido al emocionante mundo de la Página de Resultados de Fútbol! Esta plataforma web, desarrollada con React y Typescript en el frontend, junto con Node.js y Express en el backend, te mantiene al tanto de los últimos resultados de partidos de fútbol en tiempo real. Ofrecemos información detallada sobre equipos, jugadores, estadísticas, alineaciones y zona de juego para mejorar tu experiencia futbolística.
+¡Bienvenido al emocionante mundo  de Meta Soccer!.
+Esta plataforma web, desarrollada con React y Typescript en el frontend, junto con Node.js y Express en el backend, donde podras divertirte mientras entras en el metaverso de la mano del deporte mas popular del mundo.
 Funcionalidades Destacadas
 
-    Resultados en Tiempo Real: Mantente actualizado con los resultados en vivo de los partidos de fútbol.
+    Divierte mientras te adentras ene l mundo Crypto y el Metaverso, 2 de las tendencias que hoy mueven al mundo.
     Información Detallada: Explora de manera exhaustiva información sobre tus equipos y jugadores favoritos.
     Estadísticas y Clasificaciones: Analiza estadísticas detalladas y sigue la clasificación de los equipos en la liga.
 
