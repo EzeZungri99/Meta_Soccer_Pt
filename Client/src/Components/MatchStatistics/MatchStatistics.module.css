@@ -1,0 +1,113 @@
+.container{
+
+    background-color: blue;
+    flex: 1;
+    border: 2px;
+}
+
+.items {
+    background-color: #252a2e;
+    color: white;
+    padding: 50px 20px;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  
+  .contenidoSeccion {
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  h2 {
+    font-size: 48px;
+    font-family: "Righteous";
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+
+  
+
+
+  
+  .title {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+.score{
+    display: flex;
+    flex-direction: row;
+
+}  
+  
+.leftscore{
+flex: 1;
+}
+
+
+  .scoreBar{
+    height: 10px;
+
+    background-color: #1cb698;;
+    position: relative;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+ .progress {
+    /* background-color: #8db61c; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+  }
+  
+.barra-skill span {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #1cb698;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+  }
+  
+
+
+   .container {
+    background-color: blue;
+    flex: 1;
+    border: 2px;
+}
+
+.items{
+    background-color: #252a2e;
+    color: white;
+    padding: 50px 20px;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.contenidoSeccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+
+.progressoftherightteam {
+    background-color: red; 
+}

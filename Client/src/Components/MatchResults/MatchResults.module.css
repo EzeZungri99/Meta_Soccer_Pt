@@ -1,0 +1,39 @@
+.container{
+    background-color: aqua;
+    margin: 24px;
+
+}
+
+.teamresults{
+    display: flex; 
+    flex-direction: row;
+
+
+    align-items: center; /* Equivalente a items-center en Tailwind CSS */
+    justify-content: center; /* Equivalente a justify-center en Tailwind CSS */
+}
+
+.teamA{
+    background-color: blue;
+    flex: 1;
+    border: 2px;
+}
+
+.teamB{
+    background-color: red;
+    flex: 1;
+    border: 2px;
+}
+
+.points{
+    margin: 10px;
+    color: greenyellow;
+    text-align: center;
+}
+
+.a{
+    margin: 10px;
+    text-align: center;
+    color: yellow;
+
+}
