@@ -82,7 +82,7 @@
   .scoreBar{
     border-radius: 2px;
     height: 9px;
-    background-color: rgba(255, 100, 177, 0.6);;
+    background-color: rgba(255, 100, 177, 0.6);
     position: relative;
     margin-bottom: 30px;
     align-items: center;
@@ -128,10 +128,17 @@
 
 
 
-.progressoftherightteam {
+.progressoftheleftteam {
     background-color:rgba(61, 114, 253, 1);
     border-radius: 2px; 
     border-right: 4px solid rgba(6, 6, 10, 1) ;
     height: 9px;
 
+}
+
+.draw{   
+  background-color: rgba(28, 28, 28, 1);
+  border-radius: 2px; 
+  border-right: 4px solid rgba(6, 6, 10, 1) ;
+  height: 8px;
 }

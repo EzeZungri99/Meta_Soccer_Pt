@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react"
 import style from "./LineUp.module.css"
 import axios from "axios"
 
-const LineUp : React.FC = () => {
-
 interface teamInterface {
     teamname:String,
     tactic:String,
@@ -24,6 +22,8 @@ interface playerInterface {
     lastName:String
 
 }
+const LineUp : React.FC = () => {
+
 
 const [leftTeam, setLeftTeam] = useState<teamInterface | null >()
 const [rightTeam, setRightTeam] = useState<teamInterface | null>()

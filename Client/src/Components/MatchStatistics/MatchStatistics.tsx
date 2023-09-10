@@ -1,7 +1,7 @@
 import React from 'react';
 import style from "./MatchStatistics.module.css"
 import { useEffect,useState } from 'react';
- 
+import axios from "axios";
 
 interface Statistic {
     name: string;
@@ -9,17 +9,46 @@ interface Statistic {
     TeamRight: number;
 }
 
-const statistics: Statistic[] = [
-    { name: "TOTAL SHOTS", TeamLeft: 1, TeamRight: 0 },
-    { name: "SHOTS ON TARGET", TeamLeft: 5, TeamRight: 5 },
-    { name: "SHOTS OFF TARGET", TeamLeft: 8, TeamRight: 0 },
-    { name: "ASSISTS", TeamLeft: 4, TeamRight: 4 },
-    { name: "SHORT PASSES", TeamLeft: 1, TeamRight: 5 },
-    { name: "PASSES", TeamLeft: 2, TeamRight: 9 },
-    { name: "LONG PASSES", TeamLeft: 0, TeamRight: 23 }
-];
+ interface statsInterface {
+    left:{
+    goals: number,
+    assists: number,
+    passes: number,
+    longPasses: number,
+    shortPasses: number,
+    shots: number,
+    shotsOffTarget: number,
+    shotsOnTarget: number
+}
+     right:{
+        goals: number,
+        assists: number,
+        passes: number,
+        longPasses: number,
+        shortPasses: number,
+        shots: number,
+        shotsOffTarget: number,
+        shotsOnTarget: number}
+ }
+
+
+
 
 const MatchStatistics: React.FC = () => {
+    const [matchStats, setMatchStats] = useState<statsInterface | null>(null)
+    console.log("esto es matchStats",matchStats)
+    let statistics: Statistic[] = [];
+    if(matchStats){
+      statistics = [
+            { name: "TOTAL SHOTS", TeamLeft: matchStats.left.shots, TeamRight: matchStats.right.shots },
+            { name: "SHOTS ON TARGET", TeamLeft: matchStats.left.shotsOnTarget, TeamRight: matchStats.right.shotsOnTarget },
+            { name: "SHOTS OFF TARGET", TeamLeft: matchStats.left.shotsOffTarget, TeamRight: matchStats.right.shotsOffTarget },
+            { name: "ASSISTS", TeamLeft: matchStats.left.assists, TeamRight: matchStats.right.assists },
+            { name: "SHORT PASSES", TeamLeft: matchStats.left.shortPasses, TeamRight: matchStats.right.shortPasses },
+            { name: "PASSES", TeamLeft: matchStats.left.passes, TeamRight: matchStats.right.passes },
+            { name: "LONG PASSES", TeamLeft: matchStats.left.longPasses, TeamRight: matchStats.right.longPasses }
+        ];
+    }
     const [showSkills, setShowSkills] = useState(false);
 
     useEffect(() => {
@@ -28,13 +57,41 @@ const MatchStatistics: React.FC = () => {
         if (distanciaSkills >= 300) {
             setShowSkills(true);
         }
+        axios.get("http://localhost:3001/stats").then(({data})=>{
+            setMatchStats(data)
+        })
+
     }, []); 
 
-    const getTotalPercentage = (TeamLeft: number, TeamRight: number) => {
-        const total = TeamLeft + TeamRight;
-        return total > 0 ? (TeamRight / total) * 100 : 0;
+    // const getTotalPercentage = (TeamLeft: number, TeamRight: number) => {
+    //     const total = TeamLeft + TeamRight;
+    //     return total > 0 ? (TeamRight / total) * 100 : 0;
+    // };
+    const getTotalPercentage = (Team1: number, Team2: number) => {
+        const total = Team1 + Team2;
+        return total > 0 ? (Team2 / total) * 100 : 0;
     };
 
+    const scoreBarDiv = (statistic:{TeamLeft:number, TeamRight:number})=>{
+        
+
+       if(getTotalPercentage(statistic.TeamLeft,statistic.TeamRight) === 0 && getTotalPercentage(statistic.TeamRight,statistic.TeamLeft) === 0){
+       return <div style={{display:"flex"}}>
+            <div className={style.draw} style={{ width: "50%" }}>
+            </div>
+            <div className={style.draw} style={{ width: "50%"  }}>
+            </div>
+         </div>
+    }
+       return    <>
+       <div className={style.progressoftheleftteam} style={{ width: `${getTotalPercentage(statistic.TeamRight,statistic.TeamLeft)}%` }}>
+
+      </div>
+      <div className={style.progress} style={{ width: `${getTotalPercentage(statistic.TeamLeft, statistic.TeamRight)}%` }}>
+
+       </div>
+   </>
+    }
     return (
         <div className={style.container}>
             <div className={style.contenidoSeccion}>
@@ -42,7 +99,7 @@ const MatchStatistics: React.FC = () => {
                     {statistics.map((statistic, index) => (
                         <div className={style.items} key={index}>
                             <div>
- 
+                  
 
                                 <div className={style.score}>
 
@@ -59,18 +116,7 @@ const MatchStatistics: React.FC = () => {
                             </div>
 
                             <div className={style.scoreBar}>
-                                {showSkills && (
-                                         <>
-
-                                           <div className={style.progress} style={{ width: `${getTotalPercentage(statistic.TeamLeft, statistic.TeamRight)}%` }}>
-
-                                           </div>
-                                           <div className={`${style.progress} ${statistic.TeamRight > 0 ? style.progressoftherightteam : ''}`} style={{ width: `${100 - getTotalPercentage(statistic.TeamLeft, statistic.TeamRight)}%` }}>
-
-                                           </div>
-                                        </>
-
-                                )}
+                                {showSkills && (scoreBarDiv(statistic))}
                             </div>
                         </div>
                     ))}
