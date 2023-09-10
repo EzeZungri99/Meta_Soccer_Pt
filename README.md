@@ -45,4 +45,4 @@ Funcionamiento de la Página
 
 
 
-¡Disfruta de la Página de Resultados de Fútbol y mantente al tanto de tu deporte favorito como nunca antes!
+¡Disfruta del mejor juego de Fútbol en el Metaverso de la mano de tu deporte favorito como nunca antes!
